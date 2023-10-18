@@ -29,7 +29,7 @@ function App() {
           ) : (
             <img src={logo} className="App-logo" alt="logo" />
           )}
-          <h1 style={{ color: "black", fontWeight: "bold" }}>
+          <h1 style={{ color: "black", fontWeight: "" }}>
             Gena and Nathan Are Having a Baby!
           </h1>
           <h3
