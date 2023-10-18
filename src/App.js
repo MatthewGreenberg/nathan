@@ -9,10 +9,15 @@ function App() {
         className="App-header"
         style={{ zIndex: 10, position: "realtive" }}
       >
-        <div style={{ position: "relative", zIndex: 2 }}>
+        <a
+          href="https://www.babylist.com/list/genagonzalesnathangreenberg"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ position: "relative", zIndex: 2 }}
+        >
           <img src={logo} className="App-logo" alt="logo" />
           <p></p>
-          <a
+          <h1
             className="App-link"
             href="https://www.babylist.com/list/genagonzalesnathangreenberg"
             target="_blank"
@@ -24,8 +29,8 @@ function App() {
             }}
           >
             Go to the baby registry! <span>👶</span>
-          </a>
-        </div>
+          </h1>
+        </a>
         <div
           src={hamster}
           alt=""
