@@ -24,8 +24,6 @@ function App() {
             rel="noopener noreferrer"
             style={{
               marginTop: "20px",
-              background: "red",
-              boxShadow: "20px 20px 20px red",
             }}
           >
             Go to the baby registry! <span>👶</span>
@@ -41,7 +39,7 @@ function App() {
             width: "100vw",
             height: "100vh",
             zIndex: 0,
-            background: "url(" + hamster + ")",
+            // background: "url(" + hamster + ")",
           }}
         />
       </header>
