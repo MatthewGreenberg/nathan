@@ -1,8 +1,17 @@
-import logo from "./nathan.jpg";
+import logo from "./nathan.jpeg";
 import hamster from "./a.gif";
+import baby from "./baby.gif";
 import "./App.css";
 
+import Konami from "react-konami-code";
+import { useState } from "react";
+
 function App() {
+  const [cursed, setCursed] = useState(false);
+  const easterEgg = () => {
+    setCursed((state) => !state);
+  };
+
   return (
     <div className="App">
       <header
@@ -13,11 +22,17 @@ function App() {
           href="https://www.babylist.com/list/genagonzalesnathangreenberg"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ position: "relative", zIndex: 2 }}
+          style={{ position: "relative", zIndex: 2, textDecoration: "none" }}
         >
-          <img src={logo} className="App-logo" alt="logo" />
-          <p></p>
-          <h1
+          {cursed ? (
+            <img src={baby} className="App-logo" alt="logo" />
+          ) : (
+            <img src={logo} className="App-logo" alt="logo" />
+          )}
+          <h1 style={{ color: "black", fontWeight: "bold" }}>
+            Gena and Nathan Are Having a Baby!
+          </h1>
+          <h3
             className="App-link"
             href="https://www.babylist.com/list/genagonzalesnathangreenberg"
             target="_blank"
@@ -27,22 +42,25 @@ function App() {
             }}
           >
             Go to the baby registry! <span>👶</span>
-          </h1>
+          </h3>
         </a>
-        <div
-          src={hamster}
-          alt=""
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            width: "100vw",
-            height: "100vh",
-            zIndex: 0,
-            // background: "url(" + hamster + ")",
-          }}
-        />
+        {cursed && (
+          <div
+            src={hamster}
+            alt=""
+            style={{
+              position: "absolute",
+              left: "0",
+              top: "0",
+              width: "100vw",
+              height: "100vh",
+              zIndex: 0,
+              background: "url(" + hamster + ")",
+            }}
+          />
+        )}
       </header>
+      <Konami action={easterEgg} />
     </div>
   );
 }
